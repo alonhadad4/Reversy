@@ -219,6 +219,7 @@ vector<Point> BasicGameRules:: possibleMoves(Player * p, Board& b) {
 	return vec;
 }
 
+
 BasicGameRules::~BasicGameRules() {
 	// TODO Auto-generated destructor stub
 }

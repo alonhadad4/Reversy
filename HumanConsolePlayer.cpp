@@ -10,6 +10,8 @@ using namespace std;
 #include "Player.h"
 #include "Point.h"
 #include <vector>
+#include <sstream>
+
 
 
 
@@ -37,13 +39,33 @@ bool HumanConsolePlayer:: playOneTurn(GamePlay * game) {
 	} else {
 		int i , j;
 		while (!hasPlayedCorrectly) {
+			cout << this->c_ << ":your move" << endl;
 			cout << "Your possible moves: ";
 			for (iter = listOfMoves.begin(); iter != listOfMoves.end(); iter ++) {
 				cout <<"(" << iter->getX() + 1 << "," << iter->getY() + 1 << ") ";
 			}
 			cout << endl;
 			cout << "enter row number, space and column number: ";
-			cin >> i >> j;
+            string action;
+            bool invalidInp = true;
+            while (invalidInp) {
+                getline(cin,action);
+                try {
+                    int p = action.find(' ');
+                    if (p == -1) {
+                        throw std::invalid_argument("Bad argument");
+                    }
+                    istringstream(action.substr(0, p)) >> i;
+                    istringstream(action.substr(p + 1 , action.size() - 2)) >> j;
+                    invalidInp = false;
+                } catch (...) {
+                    cout << "invalid format, enter row number, space and column number:" << endl;
+                    cout << "Your possible moves: ";
+                    for (iter = listOfMoves.begin(); iter != listOfMoves.end(); iter ++) {
+                        cout <<"(" << iter->getX() + 1 << "," << iter->getY() + 1 << ") ";
+                    }
+                }
+            }
 			for (iter = listOfMoves.begin(); iter != listOfMoves.end(); iter ++) {
 				if (i == iter->getX() + 1 and j == iter->getY() + 1) {
 					this->makeMove(i - 1  , j - 1 , game);

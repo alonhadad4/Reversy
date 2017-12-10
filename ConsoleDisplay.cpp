@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-ConsoleDisplay:: ConsoleDisplay(Board &b) : BoardDisplayer (b){
+ConsoleDisplay:: ConsoleDisplay(Board  * b) : BoardDisplayer (b){
 	// TODO Auto-generated constructor stub
 }
 
@@ -22,20 +22,20 @@ ConsoleDisplay&  ConsoleDisplay:: operator= (const ConsoleDisplay& disp) {
  * it uses the array to write the numbers of the rows and columns.
  * it prints the board on the console.
  */
-void ConsoleDisplay::displayBoard(Board& b) {
-	char * tempArr = new char [b.getLength()];
-	for (int i = 1; i <= b.getLength(); i++) {
+void ConsoleDisplay::displayBoard(Board * b) {
+	char * tempArr = new char [b->getLength()];
+	for (int i = 1; i <= b->getLength(); i++) {
 			tempArr[i - 1] = 48 + i;
 			}
 		cout << " | ";
-		for (int i = 0; i < b.getLength(); i++) {
+		for (int i = 0; i < b->getLength(); i++) {
 			cout << tempArr[i] << " | ";
 		}
-		for (int i = 0; i < b.getLength(); i++) {
+		for (int i = 0; i < b->getLength(); i++) {
 			cout << " \n" << ".................................." << "\n";
 			cout << tempArr[i];
-				for (int j = 0; j < b.getLength(); j++) {
-					cout <<  "| " << b.getCell(i , j) << " ";
+				for (int j = 0; j < b->getLength(); j++) {
+					cout <<  "| " << b->getCell(i , j) << " ";
 				}
 			cout << "|";
 		}

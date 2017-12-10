@@ -29,6 +29,7 @@ public:
 	 * see comment for "performOnRow", simply for second of diagonals.
 	 */
 	virtual void performOnSecondDiagonal(char c ,int i ,int j ,Board& b);
+	GameRules(const GameRules &g);
 };
 
 #endif /* GAMERULES_H_ */

@@ -11,13 +11,13 @@
 
 class BoardDisplayer {
 public:
-	BoardDisplayer(Board& b) {
+	BoardDisplayer(Board * b) {
 		this->board_ = b;
 	}
 	// virtual ~BoardDisplayer() = 0;
-	virtual void displayBoard(Board& b) = 0;
+	virtual void displayBoard(Board * b) = 0;
 protected:
-	Board board_;
+	Board * board_;
 };
 
 #endif /* BOARDDISPLAYER_H_ */

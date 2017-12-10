@@ -12,9 +12,9 @@
 
 class ConsoleDisplay : public BoardDisplayer {
 public:
-	ConsoleDisplay(Board &b);
+	ConsoleDisplay(Board * b);
 	virtual ~ConsoleDisplay();
-	virtual void displayBoard(Board& b);
+	virtual void displayBoard(Board * b);
 	virtual ConsoleDisplay& operator= (const ConsoleDisplay& disp);
 private:
 };

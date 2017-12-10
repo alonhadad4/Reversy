@@ -17,7 +17,8 @@ public:
 	 * makes a legal move in the game, decided by the caller.
 	 */
 	virtual void makeMove(int i , int j , GamePlay * game);
-	virtual ~ Player();
+	Player(const Player &p);
+	~Player();
 protected:
 	char c_;
 };
