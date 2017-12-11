@@ -1,0 +1,11 @@
+commit 0fbd0e00ff8318cfcc048a923e0cac09e3661fd1
+Author: Alon Hadad <alonhadad4@gmail.com>
+Date:   Wed Nov 29 17:43:43 2017 +0200
+
+    changing project structure for unittests and adding AIplayer cpp and header file
+
+commit fb2f5092c109aa0ff667b7bf723af9f58d06aaf5
+Author: Jonathan Berger <jbdeco20@gmail.com>
+Date:   Sun Nov 26 13:04:06 2017 +0200
+
+    first commit
