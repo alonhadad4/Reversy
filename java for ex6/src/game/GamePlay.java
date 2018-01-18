@@ -11,6 +11,13 @@ public class GamePlay extends GridPane {
 	private Player p2;
 	private BoardDisplayer disp;
 
+	/**
+	 * initializes members by parameters given.
+	 * @param rul
+	 * @param boa
+	 * @param playerOne
+	 * @param playerTwo
+	 */
 	public GamePlay(GameRules rul , Board  boa, Player playerOne , Player playerTwo) {
 		// TODO Auto-generated constructor stub
 		this.rules = rul;
@@ -21,6 +28,10 @@ public class GamePlay extends GridPane {
 
 	}
 
+	/**
+	 * @param p , one of the players in this game.
+	 * @return list of possible moves for player p
+	 */
 	public List getPossibleMoves(Player p) {
 		return this.rules.possibleMoves(p , this.b);
 	}
@@ -33,9 +44,9 @@ public class GamePlay extends GridPane {
 		boolean possibleMovesForP1 = true;
 		boolean possibleMovesForP2 = true;
 		while (this.b.isNotFull() && (possibleMovesForP1 || possibleMovesForP2)) {
-			possibleMovesForP1 = this.p1.playOneTurn(this);
+			possibleMovesForP1 = this.p1.playOneTurn(this, 0, 0);
 			this.disp.displayBoard(this.b);
-			possibleMovesForP2 = this.p2.playOneTurn(this);
+			possibleMovesForP2 = this.p2.playOneTurn(this, 0, 0);
 			this.disp.displayBoard(this.b);
 		}
 		int countPlayerOne = 0;
@@ -60,18 +71,14 @@ public class GamePlay extends GridPane {
 		}
 	}
 
-
+	/**
+	 * function makes a move of player p in (i,j).
+	 * @param p , a player in the game
+	 * @param i
+	 * @param j
+	 */
 	public void move(Player p , int i , int j) {
 		char c = p.getChar();
 		this.rules.performMove(c , i , j , this.b);
 	}
-
-	public static void main (String[] args) {
-		Board b = new Board(8 , 8);
-		Player p1 = new HumanConsolePlayer('X');
-	    Player p2  = new HumanConsolePlayer('O');
-		GameRules rules = new BasicGameRules();
-		GamePlay game = new GamePlay(rules , b , p1 , p2);
-		game.playGame();
-		}
 }

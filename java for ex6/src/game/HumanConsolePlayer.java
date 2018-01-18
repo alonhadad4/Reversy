@@ -2,11 +2,27 @@ package game;
 import java.util.List;
 import java.util.*;
 public class HumanConsolePlayer extends Player {
+	/**
+	 * calls the super constructor.
+	 * @param c , char of player
+	 */
 	public HumanConsolePlayer (char c) {
 		super(c);
 	}
 
-	public boolean playOneTurn(GamePlay game) {
+	/**
+	 * the function gets list of possible moves for the player from game parameter.
+	 * if it is empty, it returns false.
+	 * otherwise, it asks the player for a move until he enters a legal move from
+	 * the list.
+	 * after that, it calls a function that makes the move in the game.
+	 * then it returns true.
+	 * @param game , a game play
+	 * @param x , x coordinate of move
+	 * @param y , y coordinate of move
+	 * @return true if play is legal, false otherwise
+	 */
+	public boolean playOneTurn(GamePlay game, int x, int y) {
 		char d;
 		boolean hasPlayedCorrectly = false;
 		List<Point> listOfMoves = game.getPossibleMoves(this);

@@ -1,0 +1,21 @@
+made by alon hadad 204566871 and jonathan berger 308120930
+
+Choosing a design:
+We chose jonathan's design because:
+	* He had many interfaces for future development that would save us planty of time
+	* We didnt combine alon's logic because of missmatching in the unit system. jonathan used a point class and alon worked with integers
+	* We used git to push and pull our progress and then submited the final stage of our project.
+Cons:
+	Alon's:
+		* Lack of interfaces
+		* Not using vectors
+	Jonathan's:
+		* incorrect point notations (-1)
+		* point comperator
+Pros:
+	Alon's:
+		* Strong Logic
+		* values efficiency
+	Jonathan's:
+		* Many interfaces
+		* very orgenized		

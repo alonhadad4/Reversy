@@ -1,9 +1,19 @@
 package game;
 public class ConsoleDisplay extends BoardDisplayer {
+	/**
+	 * constructor calls the super constructor.
+	 * @param boa
+	 */
 	public ConsoleDisplay (Board boa) {
 		super(boa);
 	}
 
+	/**
+	 * function creates a temporary array for convenience.
+	 * it uses the array to write the numbers of the rows and columns.
+	 * it prints the board on the console.
+	 * @param boa , board to displat
+	 */
 	public void displayBoard(Board boa) {
 		int length = boa.getLength();
 		char [] tempArr = new char [length];

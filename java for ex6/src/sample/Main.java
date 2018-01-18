@@ -12,6 +12,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    /**
+     * start a new game and loads the menusample fxml tp load the menu controller
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MenuSample.fxml"));

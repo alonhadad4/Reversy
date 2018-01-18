@@ -12,5 +12,10 @@
     <VBox spacing="10">
         <Button onAction="#startGame">Start Game</Button>
         <Button fx:id="closeButton" cancelButton="true" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="End Game" />
+        <Label fx:id="player1Score" id="player1Score">Player1 :</Label>
+        <Label fx:id="player2Score" id="player2Score">Player2 :</Label>
+        <Label fx:id="currentTurn" id="currentTurn">start game :</Label>
+        <Label fx:id="endgame" id="endgame"></Label>
     </VBox>
+
 </HBox>

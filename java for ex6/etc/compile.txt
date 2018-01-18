@@ -1,0 +1,16 @@
+./HumanConsolePlayer.o
+./AIPlayer.o
+./Menu.o
+./main.o
+./ConsoleDisplay.o
+./RemotePlayer.o
+./BasicGameRules.o
+./server_main.o
+./GamePlay.o
+./Server.o
+./Board.o
+./GameRules.o
+./Client.o
+./Player.o
+./Point.o
+./VirtualPlayer.o

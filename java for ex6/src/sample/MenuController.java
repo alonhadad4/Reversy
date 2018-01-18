@@ -16,6 +16,9 @@ import javafx.fxml.*;
 import javafx.fxml.FXML;
 
 public class MenuController {
+    /**
+     * initializes start option of the menu, that loads BoardGame.fxml to start game.
+     */
     @FXML
     protected void startGame() {
         try {
@@ -32,6 +35,9 @@ public class MenuController {
         }
     }
 
+    /**
+     * initializes settings option of the menu, that loads settingsSample.fxml.
+     */
     @FXML
     protected void editSettings() {
         try{
@@ -47,6 +53,10 @@ public class MenuController {
                 System.out.println("error: " + e);
             }
     }
+
+    /**
+     * executes exit game by closing program.
+     */
     @FXML
     protected void quitGame() {
         System.exit(0);

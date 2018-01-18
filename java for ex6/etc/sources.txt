@@ -1,0 +1,16 @@
+src/client/Point.cpp
+src/client/Menu.cpp
+src/client/AIPlayer.cpp
+src/client/Board.cpp
+src/client/HumanConsolePlayer.cpp
+src/client/RemotePlayer.cpp
+src/client/VirtualPlayer.cpp
+src/client/BasicGameRules.cpp
+src/client/Player.cpp
+src/client/GameRules.cpp
+src/client/ConsoleDisplay.cpp
+src/client/main.cpp
+src/client/Client.cpp
+src/client/GamePlay.cpp
+src/server/Server.cpp
+src/server/server_main.cpp

@@ -48,6 +48,12 @@ public class SettingsController {
     protected void closeSettings() {
 
     }
+
+    /**
+     * pressing on close button saves the settings edit by the user.
+     * it saves them to a "settings.txt" file.
+     * @param event
+     */
     @FXML
     public void handleCloseButtonAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -55,9 +61,8 @@ public class SettingsController {
             PrintWriter writer = new PrintWriter("settings.txt", "UTF-8");
             Color p1Color = Player1Color.getValue();
             Color p2Color = Player2Color.getValue();
-            String startingP = startingPlayer.getValue();
             String numberOfBlocks = numberofB.getValue();
-            writer.println(p1Color.toString() +","+ p2Color.toString() +","+ startingP +","+ numberOfBlocks);
+            writer.println(p1Color.toString() +","+ p2Color.toString() +","+ numberOfBlocks);
             writer.close();
             stage.close();
         } catch(Exception e){

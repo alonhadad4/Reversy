@@ -1,7 +1,16 @@
 package game;
 import java.util.LinkedList;
 public class BasicGameRules extends GameRules {
-	
+
+	/**
+	 * the function checks if move (i,j) is legal.
+	 * i.e. if move transfers at least one cell to the player making it.
+	 * @param c , char to put in (i,j)
+	 * @param i
+	 * @param j
+	 * @param b , board
+	 * @return true if the play is legal, false otherwise.
+	 */
 	public boolean isMoveLegal(char c, int i , int j , Board b) {
 		if (this.checkRow(c , i , j , b) || this.checkColumn(c , i , j , b) || this.checkFirstDiagonal(c , i , j , b)
 			|| this.checkSecondDiagonal(c , i , j , b)) {
@@ -12,11 +21,18 @@ public class BasicGameRules extends GameRules {
 	}
 
 	/**
+	 * the function checks if move (i,j) is legal as for looking at row i.
+	 * i.e. if move transfers at least one cell to the player making it.
 	 * function starts from the cell and turns to the beginning of the row.
 	 * it checks whether there are cells of second player adjacent to (i,j).
 	 * if yes, it checks if there is another cell of this player farther on.
 	 * if there is, it returns true.
 	 * if it hasn't returned, it does the same process towards end of the row.
+	 * @param c , char to put in (i,j)
+	 * @param i
+	 * @param j
+	 * @param b , board
+	 * @return true if the play is legal in respect to row i, false otherwise.
 	 */
 	public boolean checkRow(char c , int i , int j , Board b) {
 		boolean isThereSameColor = false;
@@ -54,11 +70,18 @@ public class BasicGameRules extends GameRules {
 	}
 
 	/**
+	 * the function checks if move (i,j) is legal as for looking at column j.
+	 * i.e. if move transfers at least one cell to the player making it.
 	 * function starts from the cell and turns to the beginning of the column.
 	 * it checks whether there are cells of second player adjacent to (i,j).
 	 * if yes, it checks if there is another cell of this player farther on.
 	 * if there is, it returns true.
 	 * if it hasn't returned, it does the same process towards end of the column.
+	 * @param c , char to put in (i,j)
+	 * @param i
+	 * @param j
+	 * @param b , board
+	 * @return true if the play is legal in respect to column j, false otherwise.
 	 */
 
 	public boolean checkColumn(char c , int i , int j , Board b) {
@@ -97,11 +120,18 @@ public class BasicGameRules extends GameRules {
 	}
 
 	/**
+	 * the function checks if move (i,j) is legal as for looking at first diagonal.
+	 * i.e. if move transfers at least one cell to the player making it.
 	 * function starts from the cell and turns to one side of the first diagonal.
 	 * it checks whether there are cells of second player adjacent to (i,j).
 	 * if yes, it checks if there is another cell of this player farther on.
 	 * if there is, it returns true.
 	 * if hasn't returned, it does the same process towards other side of diagonal.
+	 * @param c , char to put in (i,j)
+	 * @param i
+	 * @param j
+	 * @param b , board
+	 * @return true if the play is legal in respect to column j, false otherwise.
 	 */
 
 	public boolean checkFirstDiagonal(char c , int i , int j , Board b) {
@@ -140,11 +170,18 @@ public class BasicGameRules extends GameRules {
 	}
 
 	/**
+	 * the function checks if move (i,j) is legal as for looking at second diagonal.
+	 * i.e. if move transfers at least one cell to the player making it.
 	 * function starts from the cell and turns to one side of the second diagonal.
 	 * it checks whether there are cells of second player adjacent to (i,j).
 	 * if yes, it checks if there is another cell of this player farther on.
 	 * if there is, it returns true.
 	 * if hasn't returned, it does the same process towards other side of diagonal.
+	 * @param c , char to put in (i,j)
+	 * @param i
+	 * @param j
+	 * @param b , board
+	 * @return true if the play is legal in respect to column j, false otherwise.
 	 */
 
 	public boolean checkSecondDiagonal(char c , int i , int j , Board b) {
@@ -183,9 +220,12 @@ public class BasicGameRules extends GameRules {
 	}
 
 	/**
-	 * function puts all cells that are optional legal moves in a vector.
+	 * function puts all cells that are optional legal moves in a linked list.
 	 * it puts them as point objects, containing x and y for row and column.
-	 * it returns the vector.
+	 * it returns the linked list.
+	 * @param p , player
+	 * @param b , board
+	 * @return linked list of optional moves on board b for player p
 	 */
 	public LinkedList<Point> possibleMoves(Player p, Board b) {
 		char c = p.getChar();
