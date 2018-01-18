@@ -11,6 +11,6 @@
             fx:id="root" spacing="10">
     <VBox spacing="10">
         <Button onAction="#startGame">Start Game</Button>
-        <Button>End Game</Button>
+        <Button fx:id="closeButton" cancelButton="true" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="End Game" />
     </VBox>
 </HBox>

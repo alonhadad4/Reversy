@@ -36,6 +36,8 @@ public class BoardController extends GridPane {
                 } else if(board.getCell(i,j) == 'O'){
                     rect.setFill(Color.YELLOW);
                 }
+                rect.setX(j);
+                rect.setY(i);
             this.add(rect,j,i);
             }
         }

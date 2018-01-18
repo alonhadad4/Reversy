@@ -1,9 +1,13 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -15,6 +19,7 @@ public class Main extends Application {
         Scene scene = new Scene(root,400,350);
         //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         primaryStage.setTitle("FXML Welcome");
+
 
         primaryStage.setScene(scene);
         primaryStage.show();
