@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.paint.Color?>
+
+<?import javafx.collections.FXCollections?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.SettingsController"
+          prefHeight="350.0" prefWidth="400.0">
+
+    <Text text="Settings"
+          GridPane.rowIndex="0" GridPane.columnIndex="1"
+          GridPane.columnSpan="2"/>
+
+    <Text text="Player1"
+          GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+    <ColorPicker
+            fx:id="Player1Color" GridPane.rowIndex="1" GridPane.columnIndex="2">
+        <value>
+            <Color blue="0.0" green="0.0" red="1.0" />
+        </value>
+    </ColorPicker>
+
+    <Text text="Player2"
+          GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+    <ColorPicker
+            fx:id="Player2Color" GridPane.rowIndex="2" GridPane.columnIndex="2">
+        <value>
+            <Color blue="0.0" green="1.0" red="1.0" />
+        </value>
+    </ColorPicker>
+
+    <Text text="who starts?"
+          GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+    <ComboBox fx:id= "startingPlayer" value = "Player1" GridPane.rowIndex="3" GridPane.columnIndex="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Player1" />
+                <String fx:value="Player2" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Text text="Board Size?"
+          GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+
+    <ComboBox fx:id= "numberofB" value = "8" GridPane.rowIndex="8" GridPane.columnIndex="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="4" />
+                <String fx:value="6" />
+                <String fx:value="8" />
+                <String fx:value="10" />
+                <String fx:value="12" />
+                <String fx:value="14" />
+                <String fx:value="16" />
+                <String fx:value="18" />
+                <String fx:value="20" />
+                <String fx:value="22" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <HBox GridPane.rowIndex="6" GridPane.columnIndex="1">
+        <Button fx:id="closeButton" cancelButton="true" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Close" />
+    </HBox>
+
+
+</GridPane>

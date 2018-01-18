@@ -1,0 +1,12 @@
+<?importjavafx.scene.layout.*?>
+<?importjavafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController"
+      spacing="10">
+    <VBox spacing="10">
+        <Button>Start Game</Button>
+        <Button>End Game</Button>
+    </VBox>
+</HBox>
