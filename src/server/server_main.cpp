@@ -10,6 +10,7 @@ using namespace std;
 #include <stdlib.h>;
 #include <fstream>
 #include <vector>
+#include "Command.h"
 
 using namespace std;
 int main() {

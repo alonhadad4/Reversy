@@ -1,0 +1,21 @@
+commit d3c14b3d87b87a635339c10f3521ac3666e16cd6
+Author: alonhadad4 <34000018+alonhadad4@users.noreply.github.com>
+Date:   Mon Dec 11 22:02:04 2017 +0200
+
+    ex4 handin
+    
+    split into folders and add a make file that creates exe's
+
+commit 4cd052ad6727fc6da7523977797af206e50f8287
+Author: JonathanBerger1 <34000020+JonathanBerger1@users.noreply.github.com>
+Date:   Sun Dec 10 20:44:48 2017 +0200
+
+    Add files via upload
+    
+    uploading for git log
+
+commit fb2f5092c109aa0ff667b7bf723af9f58d06aaf5
+Author: Jonathan Berger <jbdeco20@gmail.com>
+Date:   Sun Nov 26 13:04:06 2017 +0200
+
+    first commit

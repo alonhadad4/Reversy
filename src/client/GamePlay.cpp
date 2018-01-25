@@ -39,8 +39,14 @@ void GamePlay:: playGame() {
 	bool possibleMovesForP2 = true;
 	while (this->b_->isNotFull() and (possibleMovesForP1 or possibleMovesForP2)) {
 		possibleMovesForP1 = this->p1_->playOneTurn(this);
+		if (this->b_->getCell(0,0) == 'd') {
+			return;
+		}
 		this->disp_->displayBoard(this->b_);
 		possibleMovesForP2 = this->p2_->playOneTurn(this);
+        if (this->b_->getCell(0,0) == 'd') {
+            return;
+        }
 		this->disp_->displayBoard(this->b_);
 	}
 	int countPlayerOne = 0;

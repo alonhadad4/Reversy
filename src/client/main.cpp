@@ -11,7 +11,9 @@ using namespace std;
 
 int main(){
     Menu * gameMenu = new Menu();
-    gameMenu->printMenu();
-    gameMenu->chooseOption();
+    while(1) {
+        gameMenu->printMenu();
+        gameMenu->chooseOption();
+    }
     delete gameMenu;
 }
